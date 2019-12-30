@@ -1,0 +1,167 @@
+
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+.header {
+  background: white;
+}
+
+.picWrapper {
+  align-items: center;
+  justify-content: center;
+}
+.cakePic{
+  width:90%;
+}
+.scrolling-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.tastesContainer {
+  flex: 0 0 25%;
+}
+@media all and (min-width: 400px) {
+  .tastesContainer {
+    flex: 0 0 20%;
+  }
+}
+@media all and (min-width: 500px) {
+  .tastesContainer {
+    flex: 0 0 15%;
+  }
+}
+@media all and (min-width: 1200px) {
+  .tastesContainer {
+    flex: 0 0 5%;
+  }
+}
+.tastePicTitleWrapper{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.tastePic {
+  width: 60px;
+  height: 60px;
+  /* background-color: red; */
+}
+.tastePic img {
+  width: 60px;
+  height: 60px;
+}
+
+.tasteTitle {
+ text-align: center;
+}
+.itemContentWrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+.itemContents{
+  flex: 1 0 50%;
+  text-align: left;
+}
+.itemContents h3{
+  margin: 0;
+}
+.itemOrderQtyWrapper {
+  margin-bottom: 4px;
+  display: flex;
+  flex-flow: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.qtyText{
+  margin: 5px;
+  font-size: 16px;
+}
+.ui.compact.button {
+  width: 100px;
+  white-space:nowrap;
+  overflow:hidden;
+}
+.itemOrderButtonWrapper{
+  display: inline-block;
+  flex: 0 0 35px;
+  text-align: right;
+}
+
+.ui.fluid.positive.button.cartButton {
+  margin-top: 15px;
+}
+.footer {
+background: lightgreen;
+}
+
+@media all and (min-width: 800px) {
+  .wrapper { 
+    flex-flow: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .scrolling-wrapper { 
+    flex: 0 0 20%;
+    order: 1; 
+    flex-flow: column;
+    height: 85vh;
+  }
+  .picWrapper { 
+    order: 2; 
+    flex: 0 0 55%;
+  }
+  .itemContentWrapper { 
+    order: 3; 
+    flex-flow: column;
+    flex: 0 0 25%;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .itemContents{
+    flex: 0 0 100px;
+  }
+  .tastesContainer {
+    flex: 0 0 20%;
+  }
+  .tastePic {
+    width: 100px;
+    height: 100px;
+    /* background-color: red; */
+  }
+  .tastePic img {
+    width: 100px;
+    height: 100px;
+  }
+  .footer  { order: 4; }
+}
+
+
+#style-1::-webkit-scrollbar-track
+{
+    border-radius: 4px;
+    background-color: rgb(250, 250, 250);
+}
+
+#style-1::-webkit-scrollbar
+{
+    width: 4px;
+    background-color: rgb(250, 250, 250);
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+    border-radius: 9px;
+    background-color: rgb(228, 225, 225);
+}
