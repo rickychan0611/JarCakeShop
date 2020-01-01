@@ -4,7 +4,8 @@ import { createBrowserHistory } from 'history';
 // import { TableContext } from "../contexts/TableContextProvider"
 
 // route components
-import cakeOrder from '../pages/CakeOrder'
+import CakeOrder from '../pages/CakeOrder'
+import ShoppingCart from '../pages/ShoppingCart'
 
 const browserHistory = createBrowserHistory();
 const getTableNumber = 0
@@ -16,14 +17,17 @@ export const renderRoutes = () => (
             {/* if no table number cookie, go to welcome page */}
             {getTableNumber === 0 ? 
             <Switch>
-                <Route exact path="/" component={cakeOrder} />
-                <Route exact path="/cake-order" component={cakeOrder} />
+                <Route exact path="/" component={CakeOrder} />
+                <Route exact path="/cake-order" component={CakeOrder} />
+                <Route exact path="/shopping-cart" component={ShoppingCart} />
+
                 <Redirect from="*" to="/" />
             </Switch>
                 : 
             <Switch>
-                <Route exact path="/" component={cakeOrder} />
-                <Route exact path="/cake-order" component={cakeOrder} />
+                <Route exact path="/" component={CakeOrder} />
+                <Route exact path="/cake-order" component={CakeOrder} />
+                <Route exact path="/shopping-cart" component={ShoppingCart} />
                 <Redirect from="*" to="/" />
             </Switch>}
         </Router>

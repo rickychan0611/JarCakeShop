@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Menu } from 'semantic-ui-react'
-import AccountsUIWrapper from '../../AccountsUIWrapper'
+import AccountsUIWrapper from '../Accounts/AccountsUIWrapper'
 
 const TopNavBar = () => {
   const [activeItem, setActiveItem] = useState('home')
